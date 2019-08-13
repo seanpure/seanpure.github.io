@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://seanpure.github.io/blog/index.html">
+<meta name="description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。 ![](GNN情感分析1/realtion extraction.png)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#39;GNN情感分析1&#39;">
+<meta property="og:url" content="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。 ![](GNN情感分析1/realtion extraction.png)">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/GNN%E6%83%85%E6%84%9F%E5%88%86%E6%9E%901/update.png">
+<meta property="og:image" content="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/GNN%E6%83%85%E6%84%9F%E5%88%86%E6%9E%901/GNN.png">
+<meta property="og:image" content="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/GNN%E6%83%85%E6%84%9F%E5%88%86%E6%9E%901/results.png">
+<meta property="og:updated_time" content="2019-08-13T05:55:52.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="&#39;GNN情感分析1&#39;">
+<meta name="twitter:description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。 ![](GNN情感分析1/realtion extraction.png)">
+<meta name="twitter:image" content="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/GNN%E6%83%85%E6%84%9F%E5%88%86%E6%9E%901/update.png">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://seanpure.github.io/blog/">
+  <link rel="canonical" href="http://seanpure.github.io/blog/2019/08/12/GNN情感分析1/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>'GNN情感分析1' | Hexo</title>
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,141 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://seanpure.github.io/blog/blog/2019/08/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/08/13/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-13T14:11:20+08:00">
-                2019-08-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -378,9 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/08/12/GNN情感分析1/" itemprop="url">'GNN情感分析1'</a></h1>
+          <h1 class="post-title" itemprop="name headline">'GNN情感分析1'</h1>
         
 
         <div class="post-meta">
@@ -430,9 +303,7 @@
       
 
       
-        
-          
-            <h1 id="图神经网络Graph-Neural-Network-GNN"><a href="#图神经网络Graph-Neural-Network-GNN" class="headerlink" title="图神经网络Graph Neural Network (GNN)"></a>图神经网络Graph Neural Network (GNN)</h1><p>[TOC]</p>
+        <h1 id="图神经网络Graph-Neural-Network-GNN"><a href="#图神经网络Graph-Neural-Network-GNN" class="headerlink" title="图神经网络Graph Neural Network (GNN)"></a>图神经网络Graph Neural Network (GNN)</h1><p>[TOC]</p>
 <h3 id="1-图神经网络的思想"><a href="#1-图神经网络的思想" class="headerlink" title="1. 图神经网络的思想"></a>1. 图神经网络的思想</h3><p>近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。</p>
 <p>![](GNN情感分析1/realtion extraction.png)</p>
 <p>图结构数据的复杂性给现有的机器学习算法带来了重大挑战。图（Graph）数据包含着十分丰富的关系型信息。从文本、图像这些非结构化数据中进行推理学习，例如句子的依赖树、图像的场景图等，都需要图推理模型。图网络（Graph neural networks）靠图中节点之间的信息传递来捕捉图中的依赖关系。</p>
@@ -483,8 +354,6 @@
 </ol>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -501,12 +370,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/08/13/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -516,10 +401,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -527,6 +413,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -547,8 +437,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,6 +489,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图神经网络Graph-Neural-Network-GNN"><span class="nav-number">1.</span> <span class="nav-text">图神经网络Graph Neural Network (GNN)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-图神经网络的思想"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 图神经网络的思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-图神经网络形式化表示"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 图神经网络形式化表示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Convolutional-Network-GCN"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">Graph Convolutional Network: (GCN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Recurrent-Network-GRN"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">Graph Recurrent Network: (GRN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Attention-Network-GAT"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">Graph Attention Network: (GAT)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-图神经网络的pytorch实现"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 图神经网络的pytorch实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1：数据预处理"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">Step 1：数据预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2：图的构建方式"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">Step 2：图的构建方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stage-3：GCN"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">Stage 3：GCN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stage-4：训练结果"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">Stage 4：训练结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考："><span class="nav-number">1.0.4.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -723,6 +638,10 @@
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
