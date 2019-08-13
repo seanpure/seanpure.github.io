@@ -79,13 +79,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://seanpure.github.io/blog/index.html">
+<meta name="description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。  图结构数据的复杂性给现有的机器学习算法带来了重大挑战。图（Graph）数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GNN-1">
+<meta property="og:url" content="http://seanpure.github.io/blog/2019/08/13/GNN-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。  图结构数据的复杂性给现有的机器学习算法带来了重大挑战。图（Graph）数据">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://seanpure.github.io/blog/.io//realtion.png">
+<meta property="og:image" content="http://seanpure.github.io/blog/.io//update.png">
+<meta property="og:image" content="http://seanpure.github.io/blog/.io//GNN.png">
+<meta property="og:image" content="http://seanpure.github.io/blog/.io//results.png">
+<meta property="og:updated_time" content="2019-08-13T07:51:54.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="GNN-1">
+<meta name="twitter:description" content="图神经网络Graph Neural Network (GNN)[TOC] 1. 图神经网络的思想近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。  图结构数据的复杂性给现有的机器学习算法带来了重大挑战。图（Graph）数据">
+<meta name="twitter:image" content="http://seanpure.github.io/blog/.io//realtion.png">
 
 
 
@@ -115,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://seanpure.github.io/blog/">
+  <link rel="canonical" href="http://seanpure.github.io/blog/2019/08/13/GNN-1/">
 
 
 
 
 
-  <title>Hexo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>GNN-1 | Hexo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -140,8 +149,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +222,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/08/13/GNN-1/" itemprop="url">GNN-1</a></h1>
+          <h1 class="post-title" itemprop="name headline">GNN-1</h1>
         
 
         <div class="post-meta">
@@ -298,9 +304,7 @@
       
 
       
-        
-          
-            <h1 id="图神经网络Graph-Neural-Network-GNN"><a href="#图神经网络Graph-Neural-Network-GNN" class="headerlink" title="图神经网络Graph Neural Network (GNN)"></a>图神经网络Graph Neural Network (GNN)</h1><p>[TOC]</p>
+        <h1 id="图神经网络Graph-Neural-Network-GNN"><a href="#图神经网络Graph-Neural-Network-GNN" class="headerlink" title="图神经网络Graph Neural Network (GNN)"></a>图神经网络Graph Neural Network (GNN)</h1><p>[TOC]</p>
 <h3 id="1-图神经网络的思想"><a href="#1-图神经网络的思想" class="headerlink" title="1. 图神经网络的思想"></a>1. 图神经网络的思想</h3><p>近年来，深度学习彻底改变了很多机器学习任务，从图像分类，视频处理到语音识别，自然语言处理等，但是通常来说，这些任务的数据都是欧式数据。现实中，很多数据都是非线性的，不是欧式数据，因此被表示为数据之间复杂关系和相互依赖的图结构。</p>
 <p><img src="/blog/.io//realtion.png" alt></p>
 <p>图结构数据的复杂性给现有的机器学习算法带来了重大挑战。图（Graph）数据包含着十分丰富的关系型信息。从文本、图像这些非结构化数据中进行推理学习，例如句子的依赖树、图像的场景图等，都需要图推理模型。图网络（Graph neural networks）靠图中节点之间的信息传递来捕捉图中的依赖关系。</p>
@@ -361,8 +365,6 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
 </ol>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -379,12 +381,12 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -394,10 +396,11 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -405,6 +408,10 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
 
 
           
+
+  
+
+
 
         </div>
         
@@ -425,8 +432,17 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -468,6 +484,22 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图神经网络Graph-Neural-Network-GNN"><span class="nav-number">1.</span> <span class="nav-text">图神经网络Graph Neural Network (GNN)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-图神经网络的思想"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 图神经网络的思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-图神经网络形式化表示"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 图神经网络形式化表示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Convolutional-Network-GCN"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">Graph Convolutional Network: (GCN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Recurrent-Network-GRN"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">Graph Recurrent Network: (GRN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Graph-Attention-Network-GAT"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">Graph Attention Network: (GAT)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-图神经网络的pytorch实现"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 图神经网络的pytorch实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1：数据预处理"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">Step 1：数据预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2：图的构建方式"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">Step 2：图的构建方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stage-3：GCN"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">Stage 3：GCN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stage-4：训练结果"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">Stage 4：训练结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考："><span class="nav-number">1.0.4.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -601,6 +633,10 @@ s_{ik} = \mathbf{v}_a^T \tanh(\mathbf{W}_a \mathbf{h}^{k}_{t-1} + \mathbf{U}_a \
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
